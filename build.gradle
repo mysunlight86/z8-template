@@ -83,6 +83,7 @@ run {
 		"-Dorg.eclipse.jetty.server.Request.maxFormContentSize=${appMaxFormContentSize}",
 		"-Dorg.mortbay.http.HttpRequest.maxFormContentSize=${appMaxFormContentSize}",
 		"-Djava.rmi.server.hostname=${appHost}",
+		"-Dfile.encoding=UTF-8",
 	]
 	args = ['-server', 'webserver']
 	workingDir = "${buildDir}/web/WEB-INF"
