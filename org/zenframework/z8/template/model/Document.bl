@@ -4,6 +4,7 @@ import org.zenframework.z8.base.table.value.FileField;
 import org.zenframework.z8.base.table.value.Link;
 import org.zenframework.z8.base.table.value.StringExpression;
 import org.zenframework.z8.base.table.value.StringField;
+import org.zenframework.z8.base.table.value.TextField;
 
 /*
  * Атрибут [generatable] указывает Z8, что таблица, которую описывает класс,
@@ -43,6 +44,12 @@ public class Document extends Table {
 	public StringField email;
 	/* Максимальная длина значения поля email */
 	email.length = 50;
+	
+	[name "XMLText"]
+	[displayName "XML-текст"]
+	/* TextField - тип поля для хранения текста неограниченной длины */
+	public TextField xmlText;
+	// public StringField xmlText;
 
 	[displayName "Документ"]
 	/*
@@ -52,7 +59,7 @@ public class Document extends Table {
 	public StringExpression fullName = name + " - " + status.name + " (" + user.name + ")";
 
 	/*
-	 * virtual - модфикатор мметода, указывающий на возможность его переопределения
+	 * virtual - модфикатор метода, указывающий на возможность его переопределения
 	 * Метод afterUpdate вызывается после изменения записи в таблице
 	 * аргумент recordId - идентификатор изменяемой записи
 	 */
