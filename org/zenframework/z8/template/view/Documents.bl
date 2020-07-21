@@ -89,7 +89,8 @@ public class Documents extends Document {
 	 * Атрибут [ui] определяет JavaScript-класс, изменяющий поведение визуального элемента по умолчанию
 	 * ( см. src/main/js/ui/control/XMLText.js )
 	 */
-	// [ui "org.zenframework.z8.template.controls.XMLText"] xmlText;
+	[ui "org.zenframework.z8.template.controls.XMLText"] xmlText;
+	// xmlText.colSpan = 2;
 
 	/* Массив names определяет перечень полей, отображаемых в левом списке в режиме формы */
 	names = { createdAt, fullName };
